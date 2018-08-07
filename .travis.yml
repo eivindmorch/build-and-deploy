@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: eivindmorch-build-and-deploy
+  skip_cleanup: true
+  api_key:
+    secure: WxwhCwaasJOANEuFKfysPOZWvQyFzsjYDlI6YhBPaoO9negePAoYVYHFUVYf7eqSUyL7cY21okwTVCsjVpWqkfcLIBW6v2zxj5aBDV6TslQs5R7kzuiaLMW5tg2dkRZMYdnk2uenIdtEegB7I1GOaIj6nvE75at7Y3LPuBQUupCXuZyt6PJNyhp+yrI4lB8Sn8VbO5wX8ql3NiIOD9J1uCiDapzPCLuP7KtaUeJaFoEkHj3J44DJ2SQy4FJQAKIAf+JQqDgSvMB1WBgliDUEUXTe9OP7YGhioHGzFGnec2c1D6eWBoe/B/wVeAYXIDFX2NqyV43xkgvSSDo5KAyAhOLk0yPL6p05C2c0BQBFDPvbSja8Mru/XPyTM8SYjP9VK4lMjH5Q6CS1FVg05nw0Mkye8ZEjsD9xR+N/suTXcS6SQc77A/OBddABJb2WZqx57MFnkMrEo7/gw/dWCnlWXl+80Qo2DHOgGB/0nAWhozSGhNf8mA6rNWJe999KS0AzOS2h6YfSp01+hw246OGaU1AinYKjJ14YbgaWV2a45ynL1Q80koWgz6pEZ113ZIzyx/a54iT38/DPxsMkZYOYb0SpUlF+1W3ZknnzK4OT/vkf12wXc1bAt2JX9bn4OKgrIbugfC2ka9QpGEGGjnYHgovVPAC0cawUTF3601yd7jQ=
